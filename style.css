@@ -65,21 +65,18 @@ header h1 {
     transition: background-color 0.3s, border 0.3s;
 }
 
-/* Colores según estado */
+/* Colores originales */
 .materia.bloqueada {
-    background-color: #f8d7da;
-    border: 1px solid #f5c2c7;
-    color: #842029;
+    background-color: #e0e0e0;  /* gris */
+    color: #555;
 }
 
 .materia.habilitada {
-    background-color: #fff3cd;
-    border: 1px solid #ffecb5;
-    color: #664d03;
+    background-color: #ffeb3b;  /* amarillo */
+    color: #333;
 }
 
 .materia.aprobada {
-    background-color: #d1e7dd;
-    border: 1px solid #badbcc;
-    color: #0f5132;
+    background-color: #4caf50;  /* verde */
+    color: white;
 }
