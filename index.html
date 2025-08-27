@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Seguimiento de Materias - Ingeniería</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Ingeniería en Informática - Jose</h1>
+
+    <div class="plan-estudios">
+
+        <!-- Semestre I -->
+        <div class="semestre" data-semestre="1">
+            <h3>Semestre I (32)</h3>
+            <ul>
+                <li class="materia" data-id="am1">Análisis Matemático I (10)</li>
+                <li class="materia" data-id="algebra">Álgebra Lineal (10)</li>
+                <li class="materia" data-id="taller-ingenieria">Taller de Ingeniería (4)</li>
+                <li class="materia" data-id="prog1">Programación I (6)</li>
+                <li class="materia">Talleres (2)</li>
+            </ul>
+        </div>
+
+        <!-- Semestre II -->
+        <div class="semestre" data-semestre="2">
+            <h3>Semestre II (36)</h3>
+            <ul>
+                <li class="materia" data-id="am2" data-prereqs="am1">Análisis Matemático II (10)</li>
+                <li class="materia" data-id="aln" data-prereqs="algebra">Álgebra Lineal Numérica (8)</li>
+                <li class="materia" data-id="fisica">Física (8)</li>
+                <li class="materia" data-id="bd1">Diseño de Base de Datos I (6)</li>
+                <li class="materia" data-id="antropologia">Antropología (3)</li>
+                <li class="materia">Talleres (1)</li>
+            </ul>
+        </div>
+
+        <!-- Semestre III -->
+        <div class="semestre" data-semestre="3">
+            <h3>Semestre III (36)</h3>
+            <ul>
+                <li class="materia" data-id="mat-discreta">Matemática Discreta (8)</li>
+                <li class="materia" data-id="logica">Lógica (4)</li>
+                <li class="materia" data-id="sis-digitales">Sistemas Digitales (8)</li>
+                <li class="materia" data-id="bd2" data-prereqs="bd1">Diseño de Base de Datos II (6)</li>
+                <li class="materia" data-id="prog2" data-prereqs="prog1">Programación II (6)</li>
+                <li class="materia" data-id="economia">Economía (3)</li>
+                <li class="materia">Talleres (1)</li>
+            </ul>
+        </div>
+
+        <!-- Semestre IV -->
+        <div class="semestre" data-semestre="4">
+            <h3>Semestre IV (36)</h3>
+            <ul>
+                <li class="materia" data-id="probabilidad" data-prereqs="am2">Probabilidad (6)</li>
+                <li class="materia" data-id="aya">Análisis y Diseño de Algoritmos (6)</li>
+                <li class="materia" data-id="tc">Teoría de la Computación (6)</li>
+                <li class="materia" data-id="proyecto1">Proyecto TIC I (6)</li>
+                <li class="materia" data-id="redes1">Redes de Datos I (6)</li>
+                <li class="materia" data-id="historia">Historia Contemporánea (3)</li>
+                <li class="materia">Talleres (3)</li>
+            </ul>
+        </div>
+
+        <!-- Semestre V -->
+        <div class="semestre" data-semestre="5">
+            <h3>Semestre V (32)</h3>
+            <ul>
+                <li class="materia" data-id="investigacion-op">Investigación Operativa (4)</li>
+                <li class="materia" data-id="arquitectura">Arquitectura y Diseño de Aplicaciones (8)</li>
+                <li class="materia" data-id="so">Sistemas Operativos (8)</li>
+                <li class="materia" data-id="infraestructura">Infraestructura Informática (6)</li>
+                <li class="materia" data-id="ingsoft1">Ingeniería de Software I (6)</li>
+                <li class="materia" data-id="etica">Ética General (2)</li>
+                <li class="materia">Talleres (2)</li>
+            </ul>
+        </div>
+
+        <!-- Semestre VI -->
+        <div class="semestre" data-semestre="6">
+            <h3>Semestre VI (32)</h3>
+            <ul>
+                <li class="materia" data-id="prog-avanzada">Programación Avanzada (6)</li>
+                <li class="materia" data-id="sis-distribuidos">Sistemas Distribuidos (6)</li>
+                <li class="materia" data-id="ingsoft2" data-prereqs="ingsoft1">Ingeniería de Software II (8)</li>
+                <li class="materia" data-id="creatividad-innovacion">Creatividad e Innovación (4)</li>
+                <li class="materia" data-id="analisis-datos">Análisis de Datos (4)</li>
+                <li class="materia" data-id="contabilidad">Contabilidad y Costos (3)</li>
+                <li class="materia">Talleres (1)</li>
+            </ul>
+        </div>
+
+        <!-- Semestre VII -->
+        <div class="semestre" data-semestre="7">
+            <h3>Semestre VII (32)</h3>
+            <ul>
+                <li class="materia" data-id="seguridad">Seguridad Informática (6)</li>
+                <li class="materia" data-id="uiux">UI / UX (4)</li>
+                <li class="materia" data-id="gestion-datos">Gestión Avanzada de Datos (6)</li>
+                <li class="materia" data-id="testing">Testing - QA Automático (4)</li>
+                <li class="materia" data-id="proyecto2">Proyectos TIC II (6)</li>
+                <li class="materia" data-id="metodologia">Metodología de la Investigación (2)</li>
+                <li class="materia" data-id="estadistica">Estadística Aplicada (2)</li>
+                <li class="materia" data-id="teologia">Cuestiones de Teología (2)</li>
+            </ul>
+        </div>
+
+        <!-- Semestre VIII -->
+        <div class="semestre" data-semestre="8">
+            <h3>Semestre VIII (30)</h3>
+            <ul>
+                <li class="materia">Intercambio (30)</li>
+            </ul>
+        </div>
+
+        <!-- Semestre IX -->
+        <div class="semestre" data-semestre="9">
+            <h3>Semestre IX (30)</h3>
+            <ul>
+                <li class="materia" data-id="gestion-ti">Gestión de Tecnologías y la Información (4)</li>
+                <li class="materia" data-id="gestion-proyectos">Gestión y Planificación de Proyectos (3)</li>
+                <li class="materia" data-id="gestion-empresarial">Elementos de Gestión Empresarial (3)</li>
+                <li class="materia" data-id="electiva1">Electiva (4)</li>
+                <li class="materia" data-id="electiva2">Electiva (4)</li>
+                <li class="materia" data-id="electiva3">Electiva (6)</li>
+                <li class="materia" data-id="pfc1" data-prereqs="ingsoft1,prog2">Proyecto Final Carrera Parte I (6)</li>
+            </ul>
+        </div>
+
+        <!-- Semestre X -->
+        <div class="semestre" data-semestre="10">
+            <h3>Semestre X (30)</h3>
+            <ul>
+                <li class="materia" data-id="derecho">Derecho Informático (4)</li>
+                <li class="materia" data-id="liderazgo">Liderazgo y Gestión de Personas (3)</li>
+                <li class="materia" data-id="finanzas">Finanzas y Proyectos de Inversión (3)</li>
+                <li class="materia" data-id="electiva4">Electiva (6)</li>
+                <li class="materia" data-id="pfc2" data-prereqs="pfc1">Proyecto Final Carrera Parte II (14)</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
