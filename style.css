@@ -1,81 +1,101 @@
+/* Paleta */
+:root{
+  --bg-page: #e9f1f6;           /* celestito grisáceo muy claro */
+  --bg-semestre: #ffffff;       /* blanco */
+  --border: #d6e0ea;
+
+  --materia-habilitada: #a9c4d8;      /* azul grisáceo claro (NO salvada) */
+  --materia-habilitada-text: #1a3c5a;
+
+  --materia-aprobada: #3b6f94;        /* azul grisáceo oscuro (SALVADA) */
+  --materia-aprobada-text: #ffffff;
+
+  --materia-bloqueada: #d3d3d3;       /* gris (NO habilitada) */
+  --materia-bloqueada-text: #888888;
+}
+
+/* Página */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #e6edf2; /* celestito grisáceo claro */
-    color: #333;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-page);
+  color: #333;
+  margin: 0;
+  padding: 20px;
 }
 
-header {
-    text-align: center;
-    padding: 30px 20px;
-    background: none; /* sin fondo, usamos el del body */
+/* Título (tu H1 está suelto, no dentro de <header>) */
+body > h1 {
+  text-align: center;
+  font-size: 32px;                 /* más grande */
+  color: var(--materia-aprobada);  /* igual a materias salvadas */
+  margin: 0 0 16px 0;
+  font-weight: bold;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 32px; /* más grande */
-    color: #2c3e50; /* azul grisáceo oscuro (igual que materias aprobadas) */
-    font-weight: bold;
-}
-
+/* Grilla de semestres (2 por fila) */
 .plan-estudios {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 semestres por fila */
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* Caja de semestre */
 .semestre {
-    background-color: #ffffff; /* blanco */
-    border: 2px solid #d6e0ea;
-    border-radius: 12px;
-    padding: 15px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  background-color: var(--bg-semestre);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 .semestre h3 {
-    text-align: center;
-    font-size: 18px;
-    color: #1a3c5a;
-    margin-bottom: 12px;
-    border-bottom: 1px solid #d6e0ea;
-    padding-bottom: 6px;
+  text-align: center;
+  font-size: 18px;
+  color: #1a3c5a;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
 }
 
 .semestre ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
+/* Materias - base */
 .materia {
-    margin: 6px 0;
-    padding: 8px;
-    border-radius: 6px;
-    font-size: 14px;
-    border: 1px solid #d6e0ea;
+  margin: 6px 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  border: 1px solid var(--border);
 }
 
-/* --- ESTADOS --- */
+/* ===== ESTADOS (coinciden con tus clases del JS) ===== */
 
-/* Materia habilitada pero NO salvada */
-.materia.habilitada {
-    background-color: #cfd8dc; /* azul grisáceo claro */
-    color: #2c3e50;
-}
-
-/* Materia aprobada/salvada */
-.materia.aprobada {
-    background-color: #2c3e50; /* azul grisáceo oscuro */
-    color: white;
-    text-decoration: line-through;
-}
-
-/* Materia bloqueada (no habilitada todavía) */
+/* NO habilitada (bloqueada) → gris */
 .materia.bloqueada {
-    background-color: #b0b0b0; /* gris */
-    color: #444;
+  background-color: var(--materia-bloqueada);
+  color: var(--materia-bloqueada-text);
+  cursor: not-allowed;
 }
+
+/* Habilitada pero NO salvada → azul grisáceo claro */
+.materia.habilitada {
+  background-color: var(--materia-habilitada);
+  color: var(--materia-habilitada-text);
+}
+
+/* Salvadas/aprobadas → azul grisáceo oscuro + tachado */
+.materia.aprobada {
+  background-color: var(--materia-aprobada);
+  color: var(--materia-aprobada-text);
+  text-decoration: line-through;
+  font-style: normal; /* por si antes había italic */
+}
+
+/* Si te queda algún bloque viejo con colores amarillos/verdes,
+   dejá ESTE bloque al FINAL del archivo para que lo sobreescriba. */
