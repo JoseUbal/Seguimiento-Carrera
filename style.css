@@ -15,7 +15,7 @@ header {
 header h1 {
     margin: 0;
     font-size: 32px; /* más grande */
-    color: #2c3e50; /* :) azul grisáceo oscuro (igual que materias aprobadas) */
+    color: #2c3e50; /* azul grisáceo oscuro (igual que materias aprobadas) */
     font-weight: bold;
 }
 
