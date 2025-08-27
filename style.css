@@ -9,19 +9,19 @@ body {
 header {
     text-align: center;
     padding: 30px 20px;
-    background: none; /* sin color, usamos el fondo general */
+    background: none; /* sin fondo, usamos el del body */
 }
 
 header h1 {
     margin: 0;
     font-size: 32px; /* más grande */
-    color: #2c3e50; /* azul grisáceo oscuro (color de materias salvadas) */
+    color: #2c3e50; /* azul grisáceo oscuro (igual que materias aprobadas) */
     font-weight: bold;
 }
 
 .plan-estudios {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 semestres por fila = 1 año */
+    grid-template-columns: repeat(2, 1fr); /* 2 semestres por fila */
     gap: 20px;
     padding: 20px;
     max-width: 1200px;
@@ -59,19 +59,23 @@ header h1 {
     border: 1px solid #d6e0ea;
 }
 
-/* Estados de materias */
-.materia.no-salvada {
+/* --- ESTADOS --- */
+
+/* Materia habilitada pero NO salvada */
+.materia.habilitada {
     background-color: #cfd8dc; /* azul grisáceo claro */
     color: #2c3e50;
 }
 
-.materia.salvada {
+/* Materia aprobada/salvada */
+.materia.aprobada {
     background-color: #2c3e50; /* azul grisáceo oscuro */
     color: white;
     text-decoration: line-through;
 }
 
-.materia.no-habilitada {
+/* Materia bloqueada (no habilitada todavía) */
+.materia.bloqueada {
     background-color: #b0b0b0; /* gris */
     color: #444;
 }
