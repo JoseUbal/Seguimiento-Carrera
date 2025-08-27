@@ -1,21 +1,22 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8fafc;
+    background-color: #e6edf2; /* celestito grisáceo claro */
     color: #333;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #1a3c5a;
-    color: white;
     text-align: center;
-    padding: 20px;
+    padding: 30px 20px;
+    background: none; /* sin color, usamos el fondo general */
 }
 
 header h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 32px; /* más grande */
+    color: #2c3e50; /* azul grisáceo oscuro (color de materias salvadas) */
+    font-weight: bold;
 }
 
 .plan-estudios {
@@ -28,16 +29,11 @@ header h1 {
 }
 
 .semestre {
-    background-color: #ffffff;
+    background-color: #ffffff; /* blanco */
     border: 2px solid #d6e0ea;
     border-radius: 12px;
     padding: 15px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    transition: transform 0.2s;
-}
-
-.semestre:hover {
-    transform: scale(1.02);
 }
 
 .semestre h3 {
@@ -60,23 +56,22 @@ header h1 {
     padding: 8px;
     border-radius: 6px;
     font-size: 14px;
-    background-color: #f4f7fa;
     border: 1px solid #d6e0ea;
-    transition: background-color 0.3s, border 0.3s;
 }
 
-/* Colores originales */
-.materia.bloqueada {
-    background-color: #e0e0e0;  /* gris */
-    color: #555;
+/* Estados de materias */
+.materia.no-salvada {
+    background-color: #cfd8dc; /* azul grisáceo claro */
+    color: #2c3e50;
 }
 
-.materia.habilitada {
-    background-color: #ffeb3b;  /* amarillo */
-    color: #333;
-}
-
-.materia.aprobada {
-    background-color: #4caf50;  /* verde */
+.materia.salvada {
+    background-color: #2c3e50; /* azul grisáceo oscuro */
     color: white;
+    text-decoration: line-through;
+}
+
+.materia.no-habilitada {
+    background-color: #b0b0b0; /* gris */
+    color: #444;
 }
